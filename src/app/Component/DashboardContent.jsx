@@ -1,9 +1,13 @@
 "use client"
 
 import { Users, FolderKanban, FileCodeIcon as FileContract, Store, Package, TrendingUp } from "lucide-react"
-
+import Header from "./Header"
 export function DashboardContent() {
   return (
+    <>
+   
+    <div className=" w-full">
+    <Header/>
     <div className="p-8 w-full">
       <h1 className="text-3xl font-bold mb-8 text-gray-800">Dashboard Overview</h1>
       <div className="grid gap-6 sdsdsd md:grid-cols-2 lg:grid-cols-3">
@@ -68,6 +72,8 @@ export function DashboardContent() {
           </div>
         </div>
       </div>
+      </div>
     </div>
+    </>
   )
 }
