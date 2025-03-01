@@ -28,8 +28,8 @@ export default function page() {
     
       <div className="w-full space-y-0 ">
         <Header/>
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl sm:text-3xl m-8 mb-0 mt-4   font-bold text-gray-900">Payroll</h2>
+        <div className="flex items-center  justify-between">
+          <h2 className="text-2xl sm:text-3xl m-8 mb-4 mt-4   font-bold text-gray-900">Payroll</h2>
         </div>
 
         <div className="space-y-0 ">
@@ -57,7 +57,7 @@ export default function page() {
             {activeTab === "contractors" && <Contracts />}
             {activeTab === "pay-runs" && <PayRuns />}
             {activeTab === "advance" && <Recordloan />}
-            
+
 
             {activeTab === "reimbursements" && <Reimberasment />}
           </div>
