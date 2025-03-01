@@ -7,8 +7,8 @@ export default function Header() {
   const [searchQuery, setSearchQuery] = useState("")
 
   return (
-    <header className="w-full h-fit bg-white border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="w-full h-fit bg-white border-b border-gray-200 ">
+      <div className="container mx-auto px-4 h-14 flex items-center justify-between">
         <div className="relative flex items-center w-full max-w-md">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />
           <input

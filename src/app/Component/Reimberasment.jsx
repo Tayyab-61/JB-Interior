@@ -60,7 +60,7 @@ export function Reimberasment() {
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-0">
       <div className="flex flex-col p-4 sm:flex-row items-center justify-between space-y-2 sm:space-y-0 sm:space-x-2">
         <div className="flex items-center space-x-2">
         <div className="relative inline-block">
@@ -97,54 +97,46 @@ export function Reimberasment() {
         <table className="min-w-full divide-y divide-indigo-100">
           <thead className="border-b-2 border-indigo-100">
             <tr className=" ">
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   Claim ID
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   Employee Name
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   Claim Type
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   Claim Date
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
                 <div className="flex items-center gap-2">
                   Status
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleSort('claimAmount')}>
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
+                <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleSort('claimAmount')}>
                   Claim Amount
                   <div className="relative">
-                    <ArrowUpDown className="h-4 w-4 text-gray-400 group-hover:hidden"/>
-                    <div className="hidden group-hover:flex flex-col">
-                      <ArrowUp className="h-4 w-4 text-indigo-600 hover:text-indigo-800"/>
-                      <ArrowDown className="h-4 w-4 text-indigo-600 hover:text-indigo-800"/>
-                    </div>
+                    <ArrowUpDown className="h-3 w-3 text-gray-400"/>
                   </div>
                 </div>
               </th>
-              <th className="px-4 sm:px-6 py-3 text-left text-xs font-medium text-black uppercase tracking-wider">
-                <div className="flex items-center gap-2 cursor-pointer group" onClick={() => handleSort('amountApproved')}>
+              <th className="px-4 sm:px-6 py-3 text-left text-xs font-semibold text-black uppercase tracking-wider">
+                <div className="flex items-center gap-2 cursor-pointer" onClick={() => handleSort('amountApproved')}>
                   Amount Approved
                   <div className="relative">
-                    <ArrowUpDown className="h-4 w-4 text-gray-400 group-hover:hidden"/>
-                    <div className="hidden group-hover:flex flex-col">
-                      <ArrowUp className="h-4 w-4 text-indigo-600 hover:text-indigo-800"/>
-                      <ArrowDown className="h-4 w-4 text-indigo-600 hover:text-indigo-800"/>
-                    </div>
+                    <ArrowUpDown className="h-3 w-3 text-gray-400"/>
                   </div>
                 </div>
               </th>

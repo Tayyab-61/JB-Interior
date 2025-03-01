@@ -32,14 +32,14 @@ export default function page() {
           <h2 className="text-2xl sm:text-3xl m-8 mb-0 mt-4   font-bold text-gray-900">Payroll</h2>
         </div>
 
-        <div className="space-y-4 ">
+        <div className="space-y-0 ">
           <div className="border-b-2 border-gray-200 md:overflow-hidden overflow-x-auto">
             <nav className="-mb-px flex flex-nowrap sm:flex-wrap space-x-4 sm:space-x-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`whitespace-nowrap font-semibold ml-8 border-b-2 px-1 py-3 sm:py-4 text-xs sm:text-sm  ${
+                  className={`whitespace-nowrap font-semibold ml-8 border-b-2 px-1 py-3 sm:py-2 text-xs sm:text-sm  ${
                     activeTab === tab.id
                       ? "border-blue-800 border-b-2 text-blue-800"
                       : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
@@ -57,6 +57,8 @@ export default function page() {
             {activeTab === "contractors" && <Contracts />}
             {activeTab === "pay-runs" && <PayRuns />}
             {activeTab === "advance" && <Recordloan />}
+            
+
             {activeTab === "reimbursements" && <Reimberasment />}
           </div>
         </div>
