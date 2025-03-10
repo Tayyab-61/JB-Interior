@@ -98,9 +98,6 @@ export function MainSidebar() {
 
   return (
     <>
-  
-  
-     
       <button
         className="lg:hidden fixed top-4 left-4 z-40 p-2 bg-black text-white rounded-lg shadow-lg hover:bg-gray-800"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -108,7 +105,7 @@ export function MainSidebar() {
         {isSidebarOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </button>
 
-      <aside className={`fixed text-sm lg:static h-screen bg-black text-white transition-all duration-300 z-30 overflow-y-auto
+      <aside className={`fixed text-sm lg:static h-screen bg-black  text-white transition-all duration-300 z-30 overflow-y-auto
         ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
         ${isCollapsed ? 'w-20' : 'w-80'}`}>
         <div className={`flex h-20 items-center border-b border-gray-700 px-6 bg-gradient-to-r from-gray-900 to-black ${isCollapsed ? 'justify-center px-2' : ''}`}>
@@ -126,7 +123,7 @@ export function MainSidebar() {
           {isCollapsed ? <ChevronsRight className="h-5 w-5" /> : <ChevronsLeft className="h-5 w-5" />}
         </button>
 
-        <nav className={`space-y-3 mt-6 ${isCollapsed ? 'p-2' : 'p-4'}`}>
+        <nav className={`space-y-3 mt-6 ${isCollapsed ? 'p-2' : ''}`}>
           {navItems.map((item) => (
             <div key={item.name} className="group">
               <button
@@ -147,13 +144,13 @@ export function MainSidebar() {
               </button>
               
               {!isCollapsed && expandedItem === item.name && item.subItems.length > 0 && (
-                <div className="ml-6 bg-slate-950 rounded-2xl text-sm mt-2 space-y-2 animate-fadeIn">    
+                <div className=" bg-slate-900  text-sm mt-2 space-y-2 animate-fadeIn">    
                   {item.subItems.map((subItem) => (
                     <Link
                       key={subItem.name}
                       href={subItem.href}
                       className="flex items-center justify-center gap-3 rounded-lg px-4 py-2.5 text-gray-300 text-sm
-                      hover:bg-gray-800/50 bg-slate-900 hover:text-white transition-all duration-200
+                      hover:bg-gray-800/50 hover:text-white transition-all duration-200
                       hover:translate-x-1"
                       onClick={() => setIsSidebarOpen(false)}
                     >
@@ -167,12 +164,6 @@ export function MainSidebar() {
           ))}
         </nav>
       </aside>
-
-     
-     
-
-  
-     
     </>
   )
 }
